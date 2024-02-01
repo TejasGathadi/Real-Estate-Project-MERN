@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import "colors";
-// import userRouter from "./routes/userRoute";
+import userRouter from "./routes/user.route.js";
 dotenv.config();
 
 mongoose
@@ -20,6 +20,4 @@ app.listen(3000, () => {
   console.log("App listening on port 3000!!!".bgBlue.white);
 });
 
-app.get("/test", (req, res) => {
-  res.send("Hello ");
-});
+app.use("/api/user", userRouter);
