@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import "colors";
 import userRouter from "./routes/user.route.js";
 dotenv.config();
+import authRouter from "./routes/auth.route.js";
 
 mongoose
   .connect(process.env.MONGO_URL)
@@ -15,9 +16,11 @@ mongoose
   });
 
 const app = express();
+app.use(express.json());
 
 app.listen(3000, () => {
   console.log("App listening on port 3000!!!".bgBlue.white);
 });
 
 app.use("/api/user", userRouter);
+app.use("/api/auth", authRouter);
