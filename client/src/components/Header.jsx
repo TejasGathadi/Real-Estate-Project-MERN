@@ -7,7 +7,10 @@ export default function Header() {
         <Link to="/">
           <h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
             <span className="text-slate-500">
-              <i>Elite</i>
+              <i>TAG</i>
+            </span>
+            <span className="text-slate-900">
+              <i> - </i>
             </span>
             <span className="text-slate-700">
               <i>Estate</i>
@@ -33,7 +36,7 @@ export default function Header() {
               About
             </li>
           </Link>
-          <Link to="/sign-in">
+          <Link to="/sign-up">
             <li className="text-slate-700 hover:underline">Sign In</li>
           </Link>
         </ul>
