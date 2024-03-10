@@ -85,6 +85,11 @@ export const getListings = async (res, req, next) => {
       type = { $in: ["sale", "rent"] };
     }
 
+    let balcony = req.query.balcony;
+    if (balcony === undefined || balcony === "false") {
+      balcony = { $in: [false, true] };
+    }
+
     const searchTerm = req.query.searchTerm || "";
 
     const sort = req.query.sort || "createdAt";
@@ -97,6 +102,7 @@ export const getListings = async (res, req, next) => {
       furnished,
       parking,
       type,
+      balcony,
     })
       .sort({
         [sort]: order,
