@@ -20,6 +20,7 @@ export default function CreateListing() {
     type: "rent",
     bedrooms: 1,
     bathrooms: 1,
+    balcony: 0,
     regularPrice: 50,
     discountPrice: 0,
     offer: false,
@@ -280,6 +281,19 @@ export default function CreateListing() {
                 value={formData.bathrooms}
               />
               <p>Baths</p>
+            </div>
+            <div className="flex item-center gap-2">
+              <input
+                className="p-3 border border-grey-300 rounded-lg"
+                type="number"
+                id="balcony"
+                min="1"
+                max="10"
+                required
+                onChange={handleChange}
+                value={formData.balcony}
+              />
+              <p>Balcony</p>
             </div>
             <div className="flex item-center gap-2">
               <input
