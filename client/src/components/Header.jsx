@@ -33,13 +33,10 @@ export default function Header() {
         <Link to="/">
           <h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
             <span className="text-slate-500">
-              <i>TAG</i>
+              <i>TAG </i>
             </span>
-            <span className="text-slate-900">
-              <i> - </i>
-            </span>
-            <span className="text-slate-700">
-              <i>Estate</i>
+            <span className="text-slate-700 ml-1">
+              <i> Estate</i>
             </span>
           </h1>
         </Link>
